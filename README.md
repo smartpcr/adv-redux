@@ -1,4 +1,4 @@
 # description
 
-port pluralsight course to typescript
-https://github.com/StephenGrider/AdvancedReduxCode
+port pluralsight course [advanced redux](https://github.com/danielstern/advanced-redux/) to typescript
+
