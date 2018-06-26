@@ -3,3 +3,9 @@
 .idea
 package-lock.json
 yarn.lock 
+src/**/*.js
+src/**/*.js.map
+server/**/*.js
+server/**/*.js.map
+/build
+/dist

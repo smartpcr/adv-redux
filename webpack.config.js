@@ -4,7 +4,12 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var extractCSS = new ExtractTextPlugin("main.css");
 
 module.exports = {
-    entry: "./src/index",
+    entry: {
+        "index": [
+            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
+            './src/index'
+        ]
+    },
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "build"),
@@ -54,7 +59,9 @@ module.exports = {
         ]
     },
     plugins: [
-        extractCSS
+        extractCSS,
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin()
     ],
     resolve: {
         modules: [path.resolve("./src"), "node_modules"],
